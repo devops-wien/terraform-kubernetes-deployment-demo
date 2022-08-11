@@ -1,3 +1,5 @@
+/*
+// todo: fixme - refactor to zone or check with terraform-data
 resource "cloudflare_record" "sks_record" {
   zone_id = local.cloudflare_zone_id
   name    = "${var.subdomain}-${local.env_name}"
@@ -6,6 +8,7 @@ resource "cloudflare_record" "sks_record" {
   ttl     = 1
   proxied = true
 }
+*/
 
 resource "cloudflare_record" "sks_record_env" {
   zone_id = local.cloudflare_zone_id
