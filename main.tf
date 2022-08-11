@@ -35,5 +35,6 @@ module "deployment" {
   target_port            = var.target_port
   zone                   = var.zone
   name                   = var.subdomain
+  env_name               = local.env_name
 }
 
