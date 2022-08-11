@@ -27,9 +27,13 @@ module "deployment" {
   client_key             = local.client_key
   cluster_ca_certificate = local.cluster_ca_certificate
   host                   = local.host
-  dns_names              = ["${var.subdomain}-${local.env_name}.${local.domain}", "${var.subdomain}-${var.zone}-${local.env_name}.${local.domain}"]
+  dns_names              = [
+    "${var.subdomain}-${local.env_name}.${local.domain}",
+    "${var.subdomain}-${var.zone}-${local.env_name}.${local.domain}"
+  ]
   image                  = var.image
   target_port            = var.target_port
   zone                   = var.zone
+  name                   = var.subdomain
 }
 
