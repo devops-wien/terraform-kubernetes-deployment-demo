@@ -21,7 +21,7 @@ resource "cloudflare_record" "sks_record_env" {
 
 module "deployment" {
   source                 = "devops-wien/deployment/kubernetes"
-  version                = "0.0.11"
+  version                = "0.0.12"
   # source = "../terraform-kubernetes-deployment"
   client_certificate     = local.client_certificate
   client_key             = local.client_key
