@@ -36,5 +36,6 @@ module "deployment" {
   zone                   = var.zone
   name                   = var.subdomain
   env_name               = local.env_name
+  deployment_strategy    = local.deployment_strategy
 }
 

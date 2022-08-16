@@ -9,4 +9,5 @@ locals {
   host                   = lookup(data.terraform_remote_state.vpc.outputs, "host", "")
   domain                 = lookup(data.terraform_remote_state.vpc.outputs, "domain", "")
   env_name               = lookup(data.terraform_remote_state.vpc.outputs, "env_name", "")
+  deployment_strategy    = lookup(data.terraform_remote_state.vpc.outputs, "deployment_strategy", "")
 }
